@@ -85,4 +85,4 @@ stages:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
-              startupCommand: 'gunicorn --bind=0.0.0.0 --timeout 600 --chdir Digital_Fingerprinting.wsgi'
+              startupCommand: 'gunicorn --bind=0.0.0.0 --timeout 600 --chdir PythonBackendProject Digital_Fingerprinting.wsgi'
